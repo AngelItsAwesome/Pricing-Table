@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    font-family: var(--font);
+
+}
+
+:root{
+    --white: #FFFFFF;
+    --blue: #3662E3;
+    --lightGrey: #E5E7EB;
+    --grey: #4D556233;
+    --black: #121826;
+    --yellow: #E9A23B;
+    --font: "Be Vietnam Pro", sans-serif;
+    --secodgrey: #4D5562;
+    --primary: #F8FAFC;
+
+}
+
+h1,h2,h3,h4,h5,p{
+    margin: 0;
+}
+
+.c{
+    width: 66.67%; /* Ancho fijo para el contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.header{
+    background-image: url("src/sand-background-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    background-color: #F8FAFC;
+    text-align: center;
+    height: 190px;
+    border-bottom: 1px solid #E5E7EB;
+}
+.header__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header__discover{
+    margin-top: 15px;
+    color: var(--secodgrey);
+
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+
+}
+.main__container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.main__columns{
+    display: grid;
+}
+
+td{
+    width: 250px;
+    border-bottom: 1px solid var(--grey);
+    border-bottom-width: .1px;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-collapse: collapse;
+    h1,p, td{
+        text-align: center;
+    }
+    td:first-child{
+        color: var(--black);
+        text-align: left;
+        font-weight: bold;
+        padding: 1rem;
+    }
+    margin-bottom: 50px;
+
+}
+.table__firstrow{
+    background-color: var(--primary);
+
+}
+.table__black{
+    color: white;
+    background-color: var(--black);
+}
+.table__black-first{
+    border-radius: 17px 17px 0 0;
+}
+
+.table__black-last{
+    color: white;
+    background-color: var(--yellow);
+}
+
+.table__lastrow{
+    height: 80px;
+    td{
+        border: none;
+    }
+}
+.table__firstrow-first{
+    border-radius: 17px 0 0 0;
+}
+.table__firstrow-last{
+    border-radius: 0 0 0 17px;
+
+}
+
+.table__header{
+
+    th{
+        padding-top: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+.table__head{
+    h1{
+        font-size: 60px;
+    }
+}
+
+.table__lastrow-last{
+    border-radius: 0 0 17px 17px;
+}
+
+.table__blue{
+    color: var(--blue);
+    margin-bottom: 10px;
+    padding: 3px 15px;
+}
+.table__blue-bord{
+    display: inline-block;
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 15px;
+}
+.table__month{
+    font-weight: 300;
+    color: var(--secodgrey);
+    margin-bottom: 50px;
+}
+.table__getstart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--blue);
+}
+.table__getstart-white{
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1024px) {
+    .free{
+        display: none;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .cost-59{
+        display: none;
+    }
+    .table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .table__head{
+        width: 200px;
+    }
+    .table__header th,
+    .table td {
+        flex: 1;
+    }
+    .table__month{
+        p{
+            margin: 0;
+        }
+    }
+    /* Change order for penultimate column */
+    .penultimate-column {
+        order: 2; /* Move penultimate column */
+    }
+
+    .table__black-first{
+        margin: 0 !important;
+    }
+
+    /* Change order for the last column */
+    tr td:last-child,
+    .table__header th:last-child {
+        order: 1; /* Move last column to penultimate position */
+    }
+
+}
+.hidden{
+    display: none;
+}
